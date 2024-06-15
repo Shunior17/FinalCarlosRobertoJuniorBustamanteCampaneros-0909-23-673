@@ -25,6 +25,16 @@ public class Main {
             }break;
             case 4:{
                 ExamenFinalVarianteC.primo
+            }break;
+            case 5:{
+                String nombre = " ";
+                int calificaion = 0;
+                Scanner sc= new Scanner(System.in);
+                System.out.println("Ingrese un nombre");
+                nombre=sc.next();
+                System.out.println("Ingrese una calificacion");
+                calificaion=sc.nextInt();
+                new Estudiante(nombre, calificaion);
             }
         }
     }
@@ -103,5 +113,30 @@ public class Main {
                     System.out.println("El numero no es primo");
                 }
         }
+    }
+    public static class Estudiante{
+    private String nombre;
+    private int calificacion;
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+
+        public int getCalificacion() {
+            return calificacion;
+        }
+
+        public void setCalificacion(int calificacion) {
+            this.calificacion = calificacion;
+        }
+
+        public Estudiante(String pnombre, int pcalificacion){
+        nombre=pnombre;
+        calificacion=pcalificacion;
+    }
     }
 }
